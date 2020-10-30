@@ -30,5 +30,8 @@ jobs:
       - name: Install ansible_collections.ansible.netcommon
         run: ansible-galaxy collection install ansible.netcommon -p ../../
 
-      - name: Run sanity tests
-        run: ansible-test sanity --docker -v --color --python 3.6
+      # - name: Run sanity tests
+      #   run: ansible-test sanity --docker -v --color --python 3.6
+
+      - name: Run unit tests
+        run: ansible-test units --docker -v --color --python 3.6

@@ -36,7 +36,7 @@ class TestDellos10CommandModule(TestDellos10Module):
     def setUp(self):
         super(TestDellos10CommandModule, self).setUp()
 
-        self.mock_run_commands = patch('ansible.modules.network.os10.os10_command.run_commands')
+        self.mock_run_commands = patch('ansible_collections.dellemc.os10.plugins.modules.os10_command.run_commands')
         self.run_commands = self.mock_run_commands.start()
 
     def tearDown(self):

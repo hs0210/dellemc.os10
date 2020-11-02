@@ -23,9 +23,9 @@ __metaclass__ = type
 
 import json
 
-from units.compat.mock import patch
+from ansible_collections.dellemc.os10.tests.unit.compat.mock import patch
 from ansible_collections.dellemc.os10.plugins.modules import os10_command
-from units.modules.utils import set_module_args
+from ansible_collections.dellemc.os10.tests.unit.plugins.modules.utils import set_module_args
 from .os10_module import TestDellos10Module, load_fixture
 
 

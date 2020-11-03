@@ -23,9 +23,9 @@ __metaclass__ = type
 
 import json
 
-from ansible_collections.dellemc.os10.tests.unit.compat.mock import patch
+from units.compat.mock import patch
 from ansible_collections.dellemc.os10.plugins.modules import os10_command
-from ansible_collections.dellemc.os10.tests.unit.plugins.modules.utils import set_module_args
+from units.modules.utils import set_module_args
 from .os10_module import TestDellos10Module, load_fixture
 
 
@@ -36,7 +36,7 @@ class TestDellos10CommandModule(TestDellos10Module):
     def setUp(self):
         super(TestDellos10CommandModule, self).setUp()
 
-        self.mock_run_commands = patch('ansible_collections.dellemc.os10.plugins.modules.os10_command.run_commands')
+        self.mock_run_commands = patch('ansible.modules.network.os10.os10_command.run_commands')
         self.run_commands = self.mock_run_commands.start()
 
     def tearDown(self):
@@ -64,7 +64,6 @@ class TestDellos10CommandModule(TestDellos10Module):
     def test_os10_command_simple(self):
         set_module_args(dict(commands=['show version']))
         result = self.execute_module()
-        print(result)
         self.assertEqual(len(result['stdout']), 1)
         self.assertTrue(result['stdout'][0].startswith('Dell EMC Networking'))
 

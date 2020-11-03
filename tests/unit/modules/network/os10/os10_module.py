@@ -24,7 +24,7 @@ __metaclass__ = type
 import os
 import json
 
-from ansible_collections.dellemc.os10.tests.unit.plugins.modules.utils import AnsibleExitJson, AnsibleFailJson, ModuleTestCase
+from units.modules.utils import AnsibleExitJson, AnsibleFailJson, ModuleTestCase
 
 
 fixture_path = os.path.join(os.path.dirname(__file__), 'fixtures')

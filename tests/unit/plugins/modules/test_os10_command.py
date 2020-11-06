@@ -56,7 +56,7 @@ class TestDellos10CommandModule(TestDellos10Module):
                 except ValueError:
                     command = item['command']
                 filename = str(command).replace(' ', '_')
-                output.append(load_fixture(filename))
+                output.append(load_fixture('command/' + filename))
             return output
 
         self.run_commands.side_effect = load_from_file

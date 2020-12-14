@@ -1,3 +1,5 @@
+[![CI](https://github.com/hs0210/dellemc.os10/workflows/CI/badge.svg)](https://github.com/hs0210/dellemc.os10/actions)
+
 # Ansible Network Collection for Dell EMC SmartFabric OS10
 
 ### Collection contents

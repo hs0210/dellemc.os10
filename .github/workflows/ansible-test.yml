@@ -10,6 +10,7 @@ jobs:
       matrix:
         ansible:
         - stable-2.10
+        - stable-2.11
         - devel
     runs-on: ubuntu-latest
     steps:
@@ -48,6 +49,7 @@ jobs:
       matrix:
         ansible:
           - stable-2.10
+          - stable-2.11
           - devel
 
     steps:
